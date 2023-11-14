@@ -9,7 +9,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	integer i = 0;
 
 	if (dest == src || src == 0)
 		return (dest);
@@ -30,7 +30,7 @@ char *_strcpy(char *dest, char *src)
  */
 char *_strdup(const char *str)
 {
-	int length = 0;
+	integer length = 0;
 	char *ret;
 
 	if (str == NULL)
@@ -53,7 +53,7 @@ char *_strdup(const char *str)
  */
 void _puts(char *str)
 {
-	int i = 0;
+	integer i = 0;
 
 	if (!str)
 		return;
@@ -71,9 +71,9 @@ void _puts(char *str)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
+integer _putchar(char c)
 {
-	static int i;
+	static integer i;
 	static char buf[WRITE_BUF_SIZE];
 
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)

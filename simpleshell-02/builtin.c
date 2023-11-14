@@ -7,9 +7,9 @@
  *  Return: exits with a given exit status
  *         (0) if info.argv[0] != "exit"
  */
-int _myexit(info_t *info)
+integer _myexit(info_t *info)
 {
-	int exitcheck;
+	integer exitcheck;
 
 	if (info->argv[1])  /* If there is an exit arguement */
 	{
@@ -35,10 +35,10 @@ int _myexit(info_t *info)
  *          constant function prototype.
  *  Return: Always 0
  */
-int _mycd(info_t *info)
+integer _mycd(info_t *info)
 {
 	char *s, *dir, buffer[1024];
-	int chdir_ret;
+	integer chdir_ret;
 
 	s = getcwd(buffer, 1024);
 	if (!s)
@@ -85,7 +85,7 @@ int _mycd(info_t *info)
  *          constant function prototype.
  *  Return: Always 0
  */
-int _myhelp(info_t *info)
+integer _myhelp(info_t *info)
 {
 	char **arg_array;
 

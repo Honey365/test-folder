@@ -8,7 +8,7 @@
  */
 void _eputs(char *str)
 {
-	int i = 0;
+	integer i = 0;
 
 	if (!str)
 		return;
@@ -26,9 +26,9 @@ void _eputs(char *str)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _eputchar(char c)
+integer _eputchar(char c)
 {
-	static int i;
+	static integer i;
 	static char buf[WRITE_BUF_SIZE];
 
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
@@ -49,9 +49,9 @@ int _eputchar(char c)
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putfd(char c, int fd)
+integer _putfd(char c, integer fd)
 {
-	static int i;
+	static integer i;
 	static char buf[WRITE_BUF_SIZE];
 
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
@@ -71,9 +71,9 @@ int _putfd(char c, int fd)
  *
  * Return: the number of chars put
  */
-int _putsfd(char *str, int fd)
+integer _putsfd(char *str, integer fd)
 {
-	int i = 0;
+	integer i = 0;
 
 	if (!str)
 		return (0);

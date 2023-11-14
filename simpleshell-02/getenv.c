@@ -24,7 +24,7 @@ char **get_environ(info_t *info)
  *  Return: 1 on delete, 0 otherwise
  * @var: the string env var property
  */
-int _unsetenv(info_t *info, char *var)
+integer _unsetenv(info_t *info, char *var)
 {
 	list_t *node = info->env;
 	size_t i = 0;
@@ -58,7 +58,7 @@ int _unsetenv(info_t *info, char *var)
  * @value: the string env var value
  *  Return: Always 0
  */
-int _setenv(info_t *info, char *var, char *value)
+integer _setenv(info_t *info, char *var, char *value)
 {
 	char *buf = NULL;
 	list_t *node;

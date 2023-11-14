@@ -7,10 +7,10 @@
  *
  * Return: 0 on success, 1 on error, or error code
  */
-int hsh(info_t *info, char **av)
+integer hsh(info_t *info, char **av)
 {
 	ssize_t r = 0;
-	int builtin_ret = 0;
+	integer builtin_ret = 0;
 
 	while (r != -1 && builtin_ret != -2)
 	{
@@ -52,9 +52,9 @@ int hsh(info_t *info, char **av)
  *			1 if builtin found but not successful,
  *			-2 if builtin signals exit()
  */
-int find_builtin(info_t *info)
+integer find_builtin(info_t *info)
 {
-	int i, built_in_ret = -1;
+	integer i, built_in_ret = -1;
 	builtin_table builtintbl[] = {
 		{"exit", _myexit},
 		{"env", _myenv},
@@ -86,7 +86,7 @@ int find_builtin(info_t *info)
 void find_cmd(info_t *info)
 {
 	char *path = NULL;
-	int i, k;
+	integer i, k;
 
 	info->path = info->argv[0];
 	if (info->linecount_flag == 1)

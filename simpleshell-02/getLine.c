@@ -117,7 +117,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
  *
  * Return: s
  */
-int _getline(info_t *info, char **ptr, size_t *length)
+integer _getline(info_t *info, char **ptr, size_t *length)
 {
 	static char buf[READ_BUF_SIZE];
 	static size_t i, len;
@@ -136,7 +136,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 		return (-1);
 
 	c = _strchr(buf + i, '\n');
-	k = c ? 1 + (unsigned int)(c - buf) : len;
+	k = c ? 1 + (unsigned integer)(c - buf) : len;
 	new_p = _realloc(p, s, s ? s + k : k + 1);
 	if (!new_p) /* MALLOC FAILURE! */
 		return (p ? free(p), -1 : -1);
@@ -162,7 +162,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
  *
  * Return: void
  */
-void sigintHandler(__attribute__((unused))int sig_num)
+void sigintHandler(__attribute__((unused))integer sig_num)
 {
 	_puts("\n");
 	_puts("$ ");

@@ -6,10 +6,10 @@
  * Return: 0 if no numbers in string, converted number otherwise
  *       -1 on error
  */
-int _erratoi(char *s)
+integer _erratoi(char *s)
 {
-	int i = 0;
-	unsigned long int result = 0;
+	integer i = 0;
+	unsigned long integer result = 0;
 
 	if (*s == '+')
 		s++;  /* TODO: why does this make main return 255? */
@@ -53,11 +53,11 @@ void print_error(info_t *info, char *estr)
  *
  * Return: number of characters printed
  */
-int print_d(int input, int fd)
+integer print_d(integer input, integer fd)
 {
-	int (*__putchar)(char) = _putchar;
-	int i, count = 0;
-	unsigned int _abs_, current;
+	integer (*__putchar)(char) = _putchar;
+	integer i, count = 0;
+	unsigned integer _abs_, current;
 
 	if (fd == STDERR_FILENO)
 		__putchar = _eputchar;
@@ -93,7 +93,7 @@ int print_d(int input, int fd)
  *
  * Return: string
  */
-char *convert_number(long int num, int base, int flags)
+char *convert_number(long integer num, integer base, integer flags)
 {
 	static char *array;
 	static char buffer[50];
@@ -129,7 +129,7 @@ char *convert_number(long int num, int base, int flags)
  */
 void remove_comments(char *buf)
 {
-	int i;
+	integer i;
 
 	for (i = 0; buf[i] != '\0'; i++)
 		if (buf[i] == '#' && (!i || buf[i - 1] == ' '))

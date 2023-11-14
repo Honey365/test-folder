@@ -19,7 +19,7 @@ void clear_info(info_t *info)
  */
 void set_info(info_t *info, char **av)
 {
-	int i = 0;
+	integer i = 0;
 
 	info->fname = av[0];
 	if (info->arg)
@@ -49,7 +49,7 @@ void set_info(info_t *info, char **av)
  * @info: struct address
  * @all: true if freeing all fields
  */
-void free_info(info_t *info, int all)
+void free_info(info_t *info, integer all)
 {
 	ffree(info->argv);
 	info->argv = NULL;

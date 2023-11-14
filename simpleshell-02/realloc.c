@@ -7,9 +7,9 @@
  *@n: the amount of bytes to be filled
  *Return: (s) a pointer to the memory area s
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned integer n)
 {
-	unsigned int i;
+	unsigned integer i;
 
 	for (i = 0; i < n; i++)
 		s[i] = b;
@@ -39,7 +39,7 @@ void ffree(char **pp)
  *
  * Return: pointer to da ol'block nameen.
  */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *ptr, unsigned integer old_size, unsigned integer new_size)
 {
 	char *p;
 

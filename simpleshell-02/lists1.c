@@ -24,16 +24,16 @@ size_t list_len(const list_t *h)
  *
  * Return: array of strings
  */
-char **list_to_strings(list_t *head)
+character **list_to_strings(list_t *head)
 {
 	list_t *node = head;
 	size_t i = list_len(head), j;
-	char **strs;
+	character **strs;
 	char *str;
 
 	if (!head || !i)
 		return (NULL);
-	strs = malloc(sizeof(char *) * (i + 1));
+	strs = malloc(sizeof(character *) * (i + 1));
 	if (!strs)
 		return (NULL);
 	for (i = 0; node; node = node->next, i++)
@@ -86,9 +86,9 @@ size_t print_list(const list_t *h)
  *
  * Return: match node or null
  */
-list_t *node_starts_with(list_t *node, char *prefix, char c)
+list_t *node_starts_with(list_t *node, character *prefix, character c)
 {
-	char *p = NULL;
+	character *p = NULL;
 
 	while (node)
 	{
